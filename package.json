@@ -1,0 +1,30 @@
+{
+  "name": "kawl",
+  "version": "0.0.1",
+  "description": "A lightweight HTTP client",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "http",
+    "client",
+    "ajax",
+    "xhr",
+    "data"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/habib-0007/kawl.git"
+  },
+  "homepage": "https://github.com/yourusername/kawl#readme",
+  "author": "Habib Adebayo",
+  "license": "MIT",
+  "dependencies": {
+    "xhr2": "^0.2.1"
+  }
+}

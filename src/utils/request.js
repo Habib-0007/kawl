@@ -1,11 +1,19 @@
 import XMLHttpRequest from "xhr2";
 
+let XHR;
+
+if (typeof window !== "undefined") {
+  XHR = window.XMLHttpRequest;
+} else {
+  XHR = XMLHttpRequest;
+}
+
 export const request = (baseURL, endpoint, options = {}) => {
   const url = `${baseURL}${endpoint}`;
   const { method = "GET", headers = {}, body } = options;
 
   return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
+    const xhr = new XHR();
     xhr.open(method, url);
 
     // Set headers

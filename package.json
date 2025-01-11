@@ -1,30 +1,30 @@
 {
-  "name": "kawl",
-  "version": "0.0.3",
-  "description": "A lightweight HTTP client",
-  "type": "module",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "http",
-    "client",
-    "ajax",
-    "xhr",
-    "data"
-  ],
-  "engines": {
-    "node": ">=12.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/habib-0007/kawl.git"
-  },
-  "homepage": "https://github.com/habib-0007/kawl",
-  "author": "Habib Adebayo",
-  "license": "MIT",
-  "dependencies": {
-    "xhr2": "^0.2.1"
-  }
+	"name": "kawl",
+	"version": "1.0.0",
+	"description": "A lightweight HTTP client",
+	"type": "commonjs",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "npx jest"
+	},
+	"keywords": [
+		"http",
+		"client",
+		"ajax",
+		"xhr",
+		"data"
+	],
+	"engines": {
+		"node": ">=12.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/habib-0007/kawl.git"
+	},
+	"homepage": "https://github.com/habib-0007/kawl",
+	"author": "Habib Adebayo",
+	"license": "MIT",
+	"devDependencies": {
+		"jest": "^29.7.0"
+	}
 }

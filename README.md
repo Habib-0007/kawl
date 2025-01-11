@@ -34,18 +34,59 @@ Kawl is built using modern web technologies, including:
 
 Kawl provides a straightforward API for making requests. Here’s a quick example
 
+##### Example: GET Request
 ```
-import { get } from "kawl";
-
-const api = "https://jsonplaceholder.typicode.com";
-
-// Example GET request
-get(api, "/posts/1")
-.then((data) => console.log(data))
-.catch((error) => console.error(error));
+const { createFetcher } = require('kawl');
+const api = createFetcher('https://jsonplaceholder.typicode.com');
+async function getPost() {
+  try {
+    const data = await api.get('/posts/1');
+    console.log('GET Response:', data);
+  } catch (error) {
+    console.error('GET Error:', error.message);
+  }
+}
+```
+##### Example: POST Request
+```
+const { createFetcher } = require('kawl');
+const api = createFetcher('https://jsonplaceholder.typicode.com');
+async function createPost() {
+  try {
+    const data = await api.post('/posts', { title: 'foo', body: 'bar', userId: 1 });
+    console.log('POST Response:', data);
+  } catch (error) {
+    console.error('POST Error:', error.message);
+  }
+}
+```
+##### Example: PUT Request
+```
+const { createFetcher } = require('kawl');
+const api = createFetcher('https://jsonplaceholder.typicode.com');
+async function updatePost() {
+  try {
+    const data = await api.put('/posts/1', { id: 1, title: 'Updated Title', body: 'Updated Content', userId: 1 });
+    console.log('PUT Response:', data);
+  } catch (error) {
+    console.error('PUT Error:', error.message);
+  }
+}
+```
+##### Example: DELETE Request
+```
+const { createFetcher } = require('kawl');
+const api = createFetcher('https://jsonplaceholder.typicode.com');
+async function deletePost() {
+  try {
+    const data = await api.delete('/posts/1');
+    console.log('DELETE Response:', data);
+  } catch (error) {
+    console.error('DELETE Error:', error.message);
+  }
+}
 
 ```
-
 ## Conclusion
 Kawl is designed to make API fetching simpler and more efficient. With its user-friendly approach and robust features, it stands out as a valuable tool for developers looking to streamline their API interactions. Feel free to contribute to the project or reach out for support!
 
